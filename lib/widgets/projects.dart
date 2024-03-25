@@ -103,12 +103,14 @@ class ProjectCard extends StatelessWidget {
           style: Theme.of(context).textTheme.subtitle2,
           ),
           SizedBox(height:15),
-          Text(project.description!,
-          overflow: TextOverflow.ellipsis,
-           maxLines:lineCount,
-          
-          
-          style: TextStyle(height: 1.5),//this height indicates the spaces between the text lines
+          Expanded(
+            child: Text(project.description!,
+            overflow: TextOverflow.fade,
+             //maxLines:lineCount,
+            
+            
+            style: TextStyle(height: 1.5),//this height indicates the spaces between the text lines
+            ),
           ),
           SizedBox(height: 15,),
           TextButton(onPressed: (){}, 
